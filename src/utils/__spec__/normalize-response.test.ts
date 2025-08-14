@@ -1,7 +1,7 @@
 import * as zod from 'zod';
-import { ApiGetEventsSchema } from '@/app/api/get-events';
+import { ApiGetEventsSchema } from '../../api/get-events';
 import { describe, expect, it } from 'vitest';
-import { normalizeResponse } from '@/utils/normalize-response';
+import { normalizeResponse } from '../normalize-response.ts';
 
 describe('normalizeResponse', () => {
 	const initialData: zod.infer<typeof ApiGetEventsSchema> = {

@@ -1,6 +1,6 @@
-'use client';
-import { ReactElement, ReactNode, useState, useTransition } from 'react';
-import { DataContext, DataContextType } from './context';
+
+import { type ReactElement, type ReactNode, useState, useTransition } from 'react';
+import { DataContext, type DataContextType } from './context';
 
 export interface ProvidersProps {
 	children: ReactNode;

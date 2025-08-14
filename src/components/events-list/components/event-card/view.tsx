@@ -1,6 +1,6 @@
-'use client';
+
 import React from 'react';
-import { EventCardProps } from './types';
+import type { EventCardProps } from './types';
 
 export const EventCard: React.FC<EventCardProps> = ({info}) => {
 	return <div className="flex flex-col border-1 border-gray-200 p-2 rounded-sm">

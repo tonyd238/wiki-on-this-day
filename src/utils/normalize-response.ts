@@ -1,6 +1,6 @@
-import { DataContextType } from '@/app/context';
+import type { DataContextType } from '../context';
 import * as zod from 'zod'
-import { ApiGetEventsSchema } from '@/app/api/get-events';
+import { ApiGetEventsSchema } from '../api/get-events';
 
 type InitialDataType = zod.infer<typeof ApiGetEventsSchema>
 

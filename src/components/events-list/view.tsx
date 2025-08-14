@@ -1,6 +1,5 @@
-'use client';
-import { FC } from 'react';
-import { useDataContext } from '@/app/context';
+import type { FC } from 'react';
+import { useDataContext } from '../../context';
 import { EventGroup } from './components/event-group';
 
 export const EventsList: FC = () => {

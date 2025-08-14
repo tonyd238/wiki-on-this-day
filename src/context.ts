@@ -1,7 +1,7 @@
-'use client';
-import { createContext, Dispatch, SetStateAction, TransitionStartFunction, useContext } from 'react';
+
+import { createContext, type Dispatch, type SetStateAction, type TransitionStartFunction, useContext } from 'react';
 import * as zod from 'zod';
-import { ApiGetEventsReturnSchema } from '@/app/api/get-events';
+import { ApiGetEventsReturnSchema } from './api/get-events';
 
 export interface DataContextType {
 	data: zod.infer<typeof ApiGetEventsReturnSchema>,

@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { UiButtonProps } from './types';
+import type { FC } from 'react';
+import type { UiButtonProps } from './types';
 import { Button } from '@headlessui/react';
 import { cn } from 'clsx-for-tailwind';
 

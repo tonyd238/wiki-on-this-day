@@ -1,8 +1,8 @@
-'use client';
+
 import React from 'react'
-import { EventGroupProps } from './types';
+import type { EventGroupProps } from './types';
 import { EventCardSkeleton } from '../event-card/skeleton';
-import { useDataContext } from '@/app/context';
+import { useDataContext } from '../../../../context';
 import { EventCard } from '../event-card';
 
 export const EventGroup: React.FC<EventGroupProps> = ({ data, title }) => {

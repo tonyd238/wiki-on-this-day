@@ -1,10 +1,9 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { describe, it, vi, expect, beforeEach } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { EventGroup } from '../view';
-import { useDataContext } from '@/app/context';
+import { useDataContext } from '../../../../../context';
 
-vi.mock('@/app/context', () => ({
+vi.mock('../../../../../context', () => ({
 	useDataContext: vi.fn(),
 }));
 
@@ -23,7 +22,7 @@ describe('EventGroup', () => {
 	it('renders EventCards when loading is false', () => {
 		mockedUseDataContext.mockReturnValue({ loading: false });
 
-		render(<EventGroup title="My Events" data={testData} />);
+		render(<EventGroup title="My Events" data={testData}/>);
 
 		expect(screen.getByText('My Events')).toBeInTheDocument();
 		expect(screen.getByText('Event 1')).toBeInTheDocument();
@@ -33,7 +32,7 @@ describe('EventGroup', () => {
 	it('renders skeletons when loading is true', () => {
 		mockedUseDataContext.mockReturnValue({ loading: true });
 
-		render(<EventGroup title="Loading Events" data={testData} />);
+		render(<EventGroup title="Loading Events" data={testData}/>);
 
 		expect(screen.getByText('Loading Events')).toBeInTheDocument();
 		const skeletons = screen.getAllByTestId('event-card-skeleton');
